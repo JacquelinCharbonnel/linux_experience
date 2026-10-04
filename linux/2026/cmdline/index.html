@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Les commandes en ligne :: Linux expérience</title>
+    <link rel="canonical" href="https://jacquelincharbonnel.github.io/linux_experience/linux/2026/cmdline/index.html">
+    <meta name="generator" content="Antora 3.2.0">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../../_/css/layout.css">
+<link rel="stylesheet" href="../../../_/css/content.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jacquelincharbonnel.github.io/linux_experience">Linux expérience</a>
+  <!-- suppression du burger du bandeau
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+-->      
+    </div>
+<!-- suppression des boutons du bandeau
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+-->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="linux" data-version="2026">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">Linux</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="priseenmain.html">Utiliser le système</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="fs.html">Système de fichiers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="shell.html">Le shell</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Linux</span>
+    <span class="version">2026</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">Linux</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2026</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../uatl_linux/2026/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Linux</a></li>
+    <li><a href="index.html">Les commandes en ligne</a></li>
+  </ul>
+</nav>
+<!-- supression de "edit this page"
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/linux/./modules/cmdline/pages/index.adoc">Edit this Page</a></div>
+-->
+</div>
+  <!-- ajout de la date de modification -->
+     <div class="lastmodify"> modifié le <span id="lastmodify"/> </div>
+  <!-- fin ajout -->
+  <div class="content">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Les commandes en ligne</h1>
+<h2 id="_proposition_de_plan" class="discrete">Proposition de plan</h2>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Introduction</p>
+</li>
+<li>
+<p>Installations</p>
+</li>
+<li>
+<p>Prise en main</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Repérage des outils essentiels : terminal, éditeur de texte, gestionnaire de fichiers</p>
+</li>
+<li>
+<p>Ligne de commandes</p>
+</li>
+<li>
+<p>Quelques commandes : man id</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Système de fichiers</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Structure</p>
+</li>
+<li>
+<p>Nommage des entrées</p>
+</li>
+<li>
+<p>Commandes essentielles</p>
+</li>
+<li>
+<p>Attributs, permissions</p>
+</li>
+<li>
+<p>super utilisateur</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Packages</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>panorama : packages - sources</p>
+</li>
+<li>
+<p>su - sudo</p>
+</li>
+<li>
+<p>installation - suppression</p>
+</li>
+<li>
+<p>mise à jour</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Processus - redirection - traitement de texte</p>
+</li>
+<li>
+<p>Services - systemd</p>
+</li>
+<li>
+<p>Gestion des utilisateurs</p>
+</li>
+<li>
+<p>Réseau</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>connexion distante</p>
+</li>
+<li>
+<p>transfert de fichiers</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>cron</p>
+</li>
+<li>
+<p>scripting</p>
+</li>
+<li>
+<p>nfs</p>
+</li>
+<li>
+<p>regex</p>
+</li>
+<li>
+<p>markdown - git</p>
+</li>
+</ol>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">
+  <span style="font-size: 0.9em;">
+    <a href="https://jacquelincharbonnel.github.io/">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp;
+    &copy;Creative Commons BY-NC-SA 4.0
+  </span>
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
