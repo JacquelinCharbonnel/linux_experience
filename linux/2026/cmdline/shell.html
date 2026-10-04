@@ -198,17 +198,23 @@ Pour la rendre persistante, il est nécessaire de la recréer à chaque session 
 <div class="paragraph">
 <p>Les variables avec un nom en majuscule sont, par convention, des variables prédéfinies par le système.</p>
 </div>
+<details class="exo">
+<summary class="title">Exercice 1<a href="" title="sysvar">&nbsp;</a></summary>
+<div class="content">
 <div class="sidebarblock exercice">
 <div class="content">
-<div class="title"><a href="" title="sysvar">Exercice sh1</a></div>
 <div class="paragraph">
 <p>Quelle est la valeur des variables <code>USER</code>, <code>HOME</code>, <code>HOSTNAME</code>, <code>OSTYPE</code>, <code>UID</code>, <code>LANG</code>, <code>PATH</code> ?</p>
 </div>
 </div>
 </div>
+</div>
+</details>
+<details class="exo">
+<summary class="title">Exercice 2<a href="" title="lang">&nbsp;</a></summary>
+<div class="content">
 <div class="sidebarblock exercice">
 <div class="content">
-<div class="title"><a href="" title="lang">Exercice sh2</a></div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -226,6 +232,8 @@ consulter à nouveau les pages précédentes.</p>
 </div>
 </div>
 </div>
+</div>
+</details>
 <h3 id="_la_variable_path" class="discrete">La variable <code>PATH</code></h3>
 <div class="paragraph">
 <p>Sa valeur est une liste de chemins séparés par le caractère <code>:</code> :</p>
@@ -265,19 +273,27 @@ s&#8217;il existe, alors il est exécuté, et le processus s&#8217;arrête là</
 </dd>
 </dl>
 </div>
+<details class="exo">
+<summary class="title">Exercice 3<a href="" title="path">&nbsp;</a></summary>
+<div class="content">
 <div class="sidebarblock exercice">
 <div class="content">
-<div class="title"><a href="" title="path">Exercice sh3</a></div>
-<div class="paragraph">
-<div class="title">Question sh3.1</div>
-<p>Effacer la valeur de la variable <code>PATH</code> et constater l&#8217;impact.</p>
+<div class="paragraph parttitle">
+<p>Question 3.1</p>
 </div>
 <div class="paragraph">
-<div class="title">Question sh3.2</div>
+<p>Effacer la valeur de la variable <code>PATH</code> et constater l&#8217;impact.</p>
+</div>
+<div class="paragraph parttitle">
+<p>Question 3.2</p>
+</div>
+<div class="paragraph">
 <p>A quoi sert la commande <code>which</code> ?</p>
 </div>
 </div>
 </div>
+</div>
+</details>
 </div>
 </div>
 <div class="sect1">
@@ -321,9 +337,11 @@ $ echo \* vaut *
 <p>De même, l&#8217;interprétation d&#8217;une chaîne de caractères varie
 suivant quelle est non délimitée, délimitée avec des guillemets, ou délimitées avec des quotes.</p>
 </div>
+<details class="exo">
+<summary class="title">Exercice 4<a href="" title="interpret">&nbsp;</a></summary>
+<div class="content">
 <div class="sidebarblock exercice">
 <div class="content">
-<div class="title"><a href="" title="interpret">Exercice sh4</a></div>
 <div class="paragraph">
 <p>Comment est interprétée la chaîne <code>"~ * $OSTYPE"</code> délimitée par des guillemets ?<br>
 Comment est interprétée <code>'~ * $OSTYPE'</code>, la même chaîne, mais délimitée cette fois par des quotes  ?<br>
@@ -331,13 +349,17 @@ Conclusion ?</p>
 </div>
 </div>
 </div>
+</div>
+</details>
+<details class="exo">
+<summary class="title">Exercice 5<a href="" title="ps1">&nbsp;</a></summary>
+<div class="content">
 <div class="sidebarblock exercice">
 <div class="content">
-<div class="title"><a href="" title="ps1">Exercice sh5</a></div>
 <div class="ulist">
 <ul>
 <li>
-<p>Affecter la chaine</p>
+<p>Affecter la chaine </p>
 </li>
 </ul>
 </div>
@@ -348,12 +370,12 @@ Conclusion ?</p>
 </div>
 <div class="paragraph">
 <p>à la variable <code>PS1</code>,
-puis exécuter quelques commandes pour constater l&#8217;impact.</p>
+puis exécuter quelques commandes pour constater l&#8217;impact. </p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Affecter maintenant à <code>PS1</code> la valeur</p>
+<p>Affecter maintenant à <code>PS1</code> la valeur </p>
 </li>
 </ul>
 </div>
@@ -374,6 +396,8 @@ puis exécuter quelques commandes pour constater l&#8217;impact.</p>
 </div>
 </div>
 </div>
+</div>
+</details>
 </div>
 </div>
 <div class="sect1">
@@ -400,9 +424,11 @@ Par exemple, l&#8217;alias <code>ll</code> se définit par :</p>
 <p>Comme les variables, les alias existent durant la session courante seulement.
 Pour les rendre persistants, il faut les recréer à chaque session (par exemple dans le profil de l’utilisateur).</p>
 </div>
+<details class="exo">
+<summary class="title">Exercice 6<a href="" title="rm-i">&nbsp;</a></summary>
+<div class="content">
 <div class="sidebarblock exercice">
 <div class="content">
-<div class="title"><a href="" title="rm-i">Exercice sh6</a></div>
 <div class="paragraph">
 <p>La commande <code>cp</code> dispose d&#8217;une option <code>-i</code> qui demande confirmation avant l&#8217;effacement de la cible (quand celle-ci existe déjà).</p>
 </div>
@@ -412,6 +438,8 @@ de façon à éviter d&#8217;écraser des fichiers sans avertissement (donc en p
 </div>
 </div>
 </div>
+</div>
+</details>
 </div>
 </div>
 <div class="sect1">
@@ -441,11 +469,13 @@ comme si elles avaient été frappées au clavier.
 C&#8217;est donc dans ce fichier que l&#8217;on peut définir variables et alias,
 pour les rendre persistants.</p>
 </div>
+<details class="exo">
+<summary class="title">Exercice 7<a href="" title="start_session">&nbsp;</a></summary>
+<div class="content">
 <div class="sidebarblock exercice">
 <div class="content">
-<div class="title"><a href="" title="start_session">Exercice sh7</a></div>
 <div class="paragraph">
-<p>Faire en sorte que
+<p>Faire en sorte que 
 la variable <code>start_session</code> indique l&#8217;heure du lancement du shell :</p>
 </div>
 <div class="listingblock">
@@ -456,6 +486,8 @@ ce shell a été lancé à 12:37:02</code></pre>
 </div>
 </div>
 </div>
+</div>
+</details>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Résumé</dt>
