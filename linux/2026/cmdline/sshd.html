@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>sshd :: Linux expérience</title>
+    <link rel="canonical" href="https://jacquelincharbonnel.github.io/linux_experience/linux/2026/cmdline/sshd.html">
+    <meta name="generator" content="Antora 3.2.0">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../../_/css/layout.css">
+<link rel="stylesheet" href="../../../_/css/content.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://jacquelincharbonnel.github.io/linux_experience">Linux expérience</a>
+  <!-- suppression du burger du bandeau
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+-->      
+    </div>
+<!-- suppression des boutons du bandeau
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+-->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="linux" data-version="2026">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-explore is-active" data-panel="explore">
+  <div class="context">
+    <span class="title">Linux</span>
+    <span class="version">2026</span>
+  </div>
+  <ul class="components">
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../uatl_linux/2026/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Linux</a></li>
+    <li><a href="sshd.html">sshd</a></li>
+  </ul>
+</nav>
+<!-- supression de "edit this page"
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/linux/./modules/cmdline/pages/sshd.adoc">Edit this Page</a></div>
+-->
+</div>
+  <!-- ajout de la date de modification -->
+     <div class="lastmodify"> modifié le <span id="lastmodify"/> </div>
+  <!-- fin ajout -->
+  <div class="content">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">sshd</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Mettre en place un serveur <code>ssh</code> consiste à :</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>installation les packages nécessaires</p>
+</li>
+<li>
+<p>démarrer le service</p>
+</li>
+<li>
+<p>adapter le cas échéant les règles du firewall</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_installer_les_packages"><a class="anchor" href="#_installer_les_packages"></a>1. Installer les packages</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="title">sur redhat-like</div>
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-none hljs"># dnf install openssh-server</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">sur debian-like</div>
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-none hljs"># apt-get upgrade
+# apt-get install openssh-server</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_démarrer_le_service"><a class="anchor" href="#_démarrer_le_service"></a>2. Démarrer le service</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-none hljs"># systemctl start sshd</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Pour que le démarrage soit effectif à chaque reboot :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-none hljs"># systemctl enable sshd</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_adapter_le_firewall"><a class="anchor" href="#_adapter_le_firewall"></a>3. Adapter le firewall</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Si un firewall tourne sur le serveur, alors il est nécessaire d&#8217;ajuster les règles de filtrage
+pour autoriser les clients à se connecter.</p>
+</div>
+<div class="paragraph">
+<p>Il se peut que l&#8217;installation du package adapte automatiquement les règles du firewall.
+Sinon, pour tester l&#8217;exportation sans se poser de question, on peut (exceptionnellement) arrêter le firewall.
+Sur Redhat, on arrête le firewall par :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-none hljs"># systemctl stop firewalld</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Pour le désactiver définitivement (déconseillé) :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-none hljs"># systemctl disable firewalld</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">
+  <span style="font-size: 0.9em;">
+    <a href="https://jacquelincharbonnel.github.io/">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp;
+    &copy;Creative Commons BY-NC-SA 4.0
+  </span>
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
